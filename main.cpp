@@ -56,7 +56,8 @@ LUA_FUNCTION(EvaluateJS) {
 GMOD_MODULE_OPEN()
 {
 	mainCtx = duk_create_heap_default();
-	
+	mainLua = LUA;
+
 	if (mainCtx != nullptr) {
 		setupDuktape();
 
@@ -76,6 +77,8 @@ GMOD_MODULE_OPEN()
 // Called when the module is unloaded
 GMOD_MODULE_CLOSE()
 {
+	mainLua = nullptr;
+
 	if (mainCtx != nullptr) {
 		duk_destroy_heap(mainCtx);
 
