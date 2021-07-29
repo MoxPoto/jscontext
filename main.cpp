@@ -80,6 +80,8 @@ static bool handlePreloadJS() {
 			return false;
 		}
 
+		codeStream.close();
+
 		// this if statement is 99% redundant
 		if (internetCode) {
 			// there is internet code and local code, let's hash and compare
@@ -93,6 +95,9 @@ static bool handlePreloadJS() {
 
 			if (hashedLocal != hashedOnline) {
 				luaPrint("Detected changes from online preload code and local code, downloading new code..");
+				luaPrint(hashedLocal.c_str());
+				luaPrint(hashedOnline.c_str());
+
 				luaPrint("Dumping new code:");
 				luaPrint(onlineCode.c_str());
 
