@@ -2,3 +2,9 @@
 	path = gmod-module-base
 	url = https://github.com/Facepunch/gmod-module-base.git
 	branch = development
+[submodule "cpp-httplib"]
+	path = cpp-httplib
+	url = https://github.com/yhirose/cpp-httplib.git
+[submodule "PicoSHA2"]
+	path = PicoSHA2
+	url = https://github.com/okdshin/PicoSHA2.git
