@@ -43,6 +43,7 @@ static bool handlePreloadJS() {
 	httplib::Client codeClient("https://raw.githubusercontent.com");
 	luaPrint("HTTP client setup..");
 
+	// codeClient.set_follow_location(true);
 	httplib::Result codeResult = codeClient.Get(PRELOAD_URL_PATH.c_str());
 
 	luaPrint("Requesting internet code..");
@@ -65,6 +66,9 @@ static bool handlePreloadJS() {
 				
 			if (!internetCode) {
 				codeStream.close();
+				luaPrint("Couldn't compare with online, using local code..");
+				luaPrint((std::string("Result status: ") + std::to_string(static_cast<int>(codeResult->status))).c_str());
+				luaPrint((std::string("Body: ") + codeResult->body).c_str());
 
 				return true; // we cant compare to the online code, so just end
 			}
