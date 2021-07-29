@@ -16,6 +16,15 @@
     <Filter Include="Source Files\duktape">
       <UniqueIdentifier>{4ea5b4e8-b780-47a4-a413-ad93196d792b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\bindings">
+      <UniqueIdentifier>{36cba54b-e0f7-4767-ae32-107452254602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PicoSHA2">
+      <UniqueIdentifier>{f8865025-3000-4d2f-b03f-f33dbe4dd188}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpp-httplib">
+      <UniqueIdentifier>{eb833bcf-9ef2-45ab-a71a-6b38a24c276e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -34,6 +43,15 @@
     </ClInclude>
     <ClInclude Include="main.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bindings\chat.h">
+      <Filter>Source Files\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="PicoSHA2\picosha2.h">
+      <Filter>Source Files\PicoSHA2</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp-httplib\httplib.h">
+      <Filter>Source Files\cpp-httplib</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

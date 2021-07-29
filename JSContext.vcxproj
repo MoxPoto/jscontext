@@ -157,9 +157,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bindings\chat.h" />
+    <ClInclude Include="cpp-httplib\httplib.h" />
     <ClInclude Include="duktape\duktape.h" />
     <ClInclude Include="duktape\duk_config.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="PicoSHA2\picosha2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

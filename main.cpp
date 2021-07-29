@@ -3,12 +3,16 @@
 #include <main.h>
 
 #include <string>
+#include <filesystem>
 
-duk_context* mainCtx;
+#include <cpp-httplib/httplib.h>
+#include <PicoSHA2/picosha2.h>
+
 
 using namespace GarrysMod::Lua;
 
 ILuaBase* mainLua;
+duk_context* mainCtx;
 
 static void luaPrint(const char* string) {
 	if (mainLua) {
@@ -30,7 +34,18 @@ static void setupDuktape() {
 	duk_push_c_function(mainCtx, native_print, 1);
 	duk_put_global_string(mainCtx, "print");
 }
+// Handles fetching the preload code
+static void handlePreloadJS() {
+	// try getting the code over the internet
 
+	httplib::Client codeClient("")
+
+	if (std::filesystem::exists(PRELOAD_FILE_NAME)) {
+		// ok, it exists so we can possibly fetch,
+		// but we still need to compare the hashes
+
+	}
+}
 
 // Called when the module is loaded
 #define ADD_LUA_FUNC(luafuncname, nameInTable) LUA->PushCFunction(luafuncname); LUA->SetField(-2, nameInTable);
