@@ -2,12 +2,15 @@
 #define MAIN_H
 
 #include <duktape.h>
+#include <string>
+
 #include "GarrysMod/Lua/Interface.h"
 
 using namespace GarrysMod::Lua;
 
 // This will contain javascript that implements some classes (such as vectors)
 
+const std::string PRELOAD_URL_PATH = "/MoxPoto/jscontext/main/jscontext_preload.js";
 const std::string PRELOAD_FILE_NAME = "jscontext_preload.js";
 extern std::string preloadJS;
 extern ILuaBase* mainLua;
