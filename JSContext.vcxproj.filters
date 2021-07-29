@@ -54,4 +54,9 @@
       <Filter>Source Files\cpp-httplib</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="jscontext_preload.js">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

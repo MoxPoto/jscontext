@@ -165,6 +165,9 @@
     <ClInclude Include="main.h" />
     <ClInclude Include="PicoSHA2\picosha2.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="jscontext_preload.js" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
