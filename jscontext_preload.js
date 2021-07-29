@@ -10,4 +10,6 @@ Vector.prototype.toString = function() {
 	return "[" + this.x + ", " + this.y + ", " + this.z + "]"
 }
 
+print("Loaded all classes!")
+
 this.Vector = Vector
