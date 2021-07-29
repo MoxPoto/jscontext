@@ -206,6 +206,8 @@ GMOD_MODULE_OPEN()
 				std::string errorMsg = "FATAL ERROR (PRELOAD): " + std::string(evalMsg);
 
 				duk_destroy_heap(mainCtx);
+				mainCtx = nullptr;
+
 				LUA->ThrowError(errorMsg.c_str());
 
 				return 0;
